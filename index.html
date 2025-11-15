@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Elegante - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="logo">Restaurant</h1>
+                <nav class="category-nav">
+                    <ul class="category-list">
+                        <li class="category-item active" data-category="specials">
+                            <i class="icon-star"></i> Specials
+                        </li>
+                        <li class="category-item" data-category="appetizers">
+                            <i class="icon-food"></i> Appetizers
+                        </li>
+                        <li class="category-item" data-category="mains">
+                            <i class="icon-food"></i> Main Courses
+                        </li>
+                        <li class="category-item" data-category="desserts">
+                            <i class="icon-food"></i> Desserts
+                        </li>
+                        <li class="category-item" data-category="drinks">
+                            <i class="icon-drink"></i> Drinks
+                        </li>
+                    </ul>
+                </nav>
+                <button class="view-order-btn" id="view-order-btn">
+                    <i class="icon-cart"></i>
+                    <span>View Your Order</span>
+                    <span class="order-count">0</span>
+                </button>
+            </header>
+            <div class="menu-container">
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search for a dish...">
+                </div>
+                <div class="search-recommendations" id="search-recommendations">
+                    <!-- Recommendations will be dynamically generated here -->
+                </div>
+                <h2 class="menu-title">Today's Specials</h2>
+                <div class="menu-grid">
+                    <!-- Menu items will be dynamically generated here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Order Page Overlay -->
+        <div class="overlay" id="order-page-overlay">
+            <div class="order-page">
+                <div class="order-header">
+                    <h2>Your Order</h2>
+                    <button class="close-btn" id="close-order-btn">×</button>
+                </div>
+                <div class="order-items">
+                    <!-- Order items will be dynamically generated here -->
+                </div>
+                <div class="order-details-form">
+                    <div class="form-group">
+                        <label for="seat-number">Table Number:</label>
+                        <input type="text" id="seat-number" placeholder="e.g., A12">
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method:</label>
+                        <div class="payment-options">
+                            <input type="radio" id="pay-card" name="payment-method" value="card" checked>
+                            <label for="pay-card">Card</label>
+                            <input type="radio" id="pay-cash" name="payment-method" value="cash">
+                            <label for="pay-cash">Cash</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-footer">
+                    <div class="total-amount">EGP 0.00</div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div class="overlay" id="modal-overlay">
+            <div class="modal" id="modal">
+                <!-- Modal content will be dynamically generated here -->
+            </div>
+        </div>
+
+        <!-- Notification Pop-up -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Success Message Overlay -->
+        <div class="overlay" id="success-overlay">
+            <div class="success-message" id="success-message">
+                <div class="success-icon">
+                    &#10004;
+                </div>
+                <h2 class="success-title">Thank you for ordering</h2>
+                <p class="success-text">Your order has been placed successfully.</p>
+                <button class="back-to-menu-btn" id="back-to-menu">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
